@@ -4,7 +4,7 @@ const { Client, Collection, Intents } = require('discord.js');
 const { token } = require('./config.json');
 
 //Imports other important files
-const db = require('./other/firebase.js')
+const db = require('./firebase.js')
 const addXp = require('./other/addXp.js')
 
 //Creates a client

@@ -1,4 +1,4 @@
-const db = require('./firebase.js')
+const db = require('../firebase.js')
 
 async function addXp(user) {
     const ref = await db.doc(`users/${user}`)
