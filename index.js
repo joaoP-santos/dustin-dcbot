@@ -3,8 +3,12 @@ const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
 const { token } = require('./config.json');
 
+//Imports other important files
+const db = require('./other/firebase.js')
+const addXp = require('./other/addXp.js')
+
 //Creates a client
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 //Gets commands files from "commands" folder
 client.commands = new Collection();
@@ -34,7 +38,7 @@ client.on('interactionCreate', async (interaction) => {
 
     //Runs the command
     try {
-        await command.execute(interaction, client);
+        await command.execute(interaction, client, db);
     } catch (error) {
         console.error(error);
         await interaction.reply({
@@ -43,5 +47,10 @@ client.on('interactionCreate', async (interaction) => {
         });
     }
 });
+
+client.on('messageCreate', async (message) => {
+  if (message.author.bot) return
+  addXp(message.author.id)
+})
 
 client.login(token);

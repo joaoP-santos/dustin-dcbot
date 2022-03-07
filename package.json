@@ -1,23 +1,34 @@
 {
-    "name": "dustin-dcbot",
-    "version": "1.0.0",
-    "description": "A Discord bot with various functionalities focused on education",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node index.js",
-        "com": "node deploy-commands"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@discordjs/builders": "^0.11.0",
-        "@discordjs/rest": "^0.2.0-canary.0",
-        "discord-api-types": "^0.25.2",
-        "discord.js": "^13.5.1",
-        "dotenv": "^10.0.0"
-    },
-    "devDependencies": {
-        "eslint": "^8.6.0"
-    }
+  "name": "dustin-dcbot",
+  "version": "1.0.0",
+  "description": "A Discord bot with various functionalities focused on education",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "com": "node deploy-commands"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.11.0",
+    "@discordjs/rest": "^0.2.0-canary.0",
+    "discord-api-types": "^0.25.2",
+    "discord.js": "^13.5.1",
+    "dotenv": "^10.0.0",
+    "firebase": "^8.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "node": "^16.13.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaoP-santos/dustin-dcbot.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/joaoP-santos/dustin-dcbot/issues"
+  },
+  "homepage": "https://github.com/joaoP-santos/dustin-dcbot#readme"
 }
